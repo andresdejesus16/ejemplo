@@ -1,0 +1,33 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+int ancho = 1, filas, i, j;
+main()
+{   
+    cout<<"Ingrese la cantidad de filas de su arbolito: ";
+    cin>>filas;
+    cout<<endl;
+    system("color 0A" );
+    for (i = filas; i != 0; i--){
+        cout.width(i);
+        for (j = 0; j < ancho; j++){
+            cout<<"*";
+        }
+        ancho += 2;
+        cout<<endl;
+    }
+    for (i = ((ancho - 2) / 2 - 3) / 2; i != 0; i--){
+        cout.width((ancho * 40) / 100);
+        for (j = 0; j < (ancho * 20) / 100; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    for (i = 2; i != 0; i--){
+        cout.width((ancho * 30) / 100);
+        for (j = 0; j < (ancho * 40) / 100; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
